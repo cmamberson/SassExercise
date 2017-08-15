@@ -1,0 +1,105 @@
+//sets background to 100%, mixin calculates background minus user input
+
+
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif|Montserrat:300');
+
+$pageWidth: 100%;
+$headerFont: 'Montserrat';
+$secondaryFont: 'Droid Serif';
+$headerSize: 30px;
+$secondarySize: 15px;
+$white: #FFFFFF;
+//div width mixin
+@mixin div-width($widthNum){
+  width: $pageWidth - $widthNum;
+}
+//div format
+* {
+  box-sizing: border-box;
+
+  body {
+    width:$pageWidth;
+    background: $white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    div {
+      @include div-width(50%);
+      height: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 50px;
+        img{
+         width: 60%;
+        }
+        h1{
+          color: $white;
+          font: {
+            family: $headerFont;
+            size: $headerSize;
+          }
+        }
+        p{
+          color: $white;
+          font: {
+            family: $secondaryFont;
+            size: $secondarySize;
+            style: italic;
+          }
+        }
+          .line{
+            background: $white;
+            height: 3px;
+            width: 30px;
+            padding: 0px;
+          }
+
+          }
+        }
+
+    }
+
+ //colors
+$red: #ec7471;
+.red{
+  background:$red;
+}
+.green{
+  background:#93dc88;
+}
+.blue{
+  background:#85cdf4;
+}
+.purp{
+  background:#c097cc;
+}
+.cyan{
+  background:#2bcbc5;
+}
+.peach{
+  background:#f3bfb9;
+}
+.yellow{
+  background:#e3d578;
+}
+.navy{
+  background:#7191e4;
+}
+@import "_headerAndFooter.scss";
+
+//formats page to column when screen is 800px
+@media (max-width:800px) {
+  body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    div{
+      width: $pageWidth;
+    }
+  }
+}

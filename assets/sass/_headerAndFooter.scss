@@ -1,0 +1,34 @@
+header{
+  width: $pageWidth;
+  background: $white;
+  padding: 30px 0 30px 40px;
+
+  h1{
+    color: $red;
+    font: {
+      family: $headerFont;
+      size: $headerSize;
+    }
+  }
+  h2{
+    color: #adadad;
+    font: {
+      family: $secondaryFont;
+      size: $secondarySize;
+      style: italic;
+    }
+
+  }
+}
+footer{
+  width: $pageWidth;
+  background: #333333;
+  padding: 30px 0 30px 40px;
+  p{
+    color: $white;
+    font: {
+      family: $headerFont;
+      size: $secondarySize;
+    }
+  }
+}
